@@ -110,14 +110,14 @@ author:
   avatar           : "/images/bio.png"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Graduate Biostatistics Student"
   location         : "New York"
-  email            :
+  email            : "mn2824@columbia.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: mailto:your.name@email.com
-    - label: "Website"
+    - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+       url: "https://www.linkedin.com/in/melissanuñez/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -126,7 +126,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+       url: "https://github.com/melissa-nunez"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -142,7 +142,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+       url: "https://github.com/melissa-nunez"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
