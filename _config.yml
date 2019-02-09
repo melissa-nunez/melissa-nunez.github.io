@@ -107,14 +107,14 @@ analytics:
 # Site Author
 author:
   name             : "Melissa Nuñez"
-  avatar           : "/images/bio.png"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/bio.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Graduate Biostatistics Student"
   location         : "New York"
   email            : "mn2824@columbia.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+       url: mailto:mn2824@columbia.edu
     - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
        url: "https://www.linkedin.com/in/melissanuñez/"
