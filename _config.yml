@@ -115,7 +115,7 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: mailto:mn2824@columbia.edu
-    - label: "LinkedIn"
+    - label: "Website"
       icon: "fas fa-fw fa-link"
        url: "https://www.linkedin.com/in/melissanuñez/"
     - label: "Twitter"
