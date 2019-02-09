@@ -117,7 +117,7 @@ author:
       # url: mailto:mn2824@columbia.edu
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://www.linkedin.com/in/melissanuñez/"
+       url: "https://www.linkedin.com/in/melissanuñez/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -301,4 +301,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-      
