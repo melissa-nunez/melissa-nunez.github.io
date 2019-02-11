@@ -18,8 +18,8 @@ theme: jekyll-theme-so-simple
 locale: en-US
 title: "Melissa Nuñez"
 description: "It really is the best."
-baseurl: # the subpath of your site, e.g. "/blog"
-url: #"https://melissa-nunez.github.io" # the base hostname & protocol for your site e.g.
+baseurl: "/about" # the subpath of your site, e.g. "/blog"
+url: "https://melissa-nunez.github.io" # the base hostname & protocol for your site e.g.
 logo: "/images/bio.png" # path of site logo, e.g.
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
@@ -89,7 +89,7 @@ defaults:
 author:
   name:
   picture:
-  email: 
+  email:
   twitter:
   links:
     - title: "Github"
