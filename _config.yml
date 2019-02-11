@@ -72,9 +72,32 @@ gems:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 # Exclude these files from your production _site
+include:
+  - _pages
 exclude:
     - Gemfile
     - Gemfile.lock
     - LICENSE
     - README.md
     - CNAME
+
+    # Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+    #_pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
