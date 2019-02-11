@@ -86,13 +86,13 @@ defaults:
       share: true
 
 # Site Author
-author: Melissa Nuñez
-  name:
+author: "Melissa Nuñez"
+  name: "Melissa Nuñez"
   picture:
-  email: mn2824@columbia.edu
+  email: "mn2824@columbia.edu"
   twitter:
   links:
-    - title: Github
+    - title: "Github"
       url: "https://github.com/melissa-nunez"
       icon:
 
