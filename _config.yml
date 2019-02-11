@@ -19,7 +19,7 @@ locale: en-US
 title: "Melissa Nuñez"
 description: "It really is the best."
 baseurl: # the subpath of your site, e.g. "/blog"
-url: "https://melissa-nunez.github.io" # the base hostname & protocol for your site e.g.
+url: #"https://melissa-nunez.github.io" # the base hostname & protocol for your site e.g.
 logo: "/images/bio.png" # path of site logo, e.g.
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
@@ -86,10 +86,10 @@ defaults:
       share: true
 
 # Site Author
-author: "Melissa Nuñez"
-  name: "Melissa Nuñez"
+author:
+  name:
   picture:
-  email: "mn2824@columbia.edu"
+  email: 
   twitter:
   links:
     - title: "Github"
