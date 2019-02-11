@@ -1,16 +1,14 @@
 # Sample Authors
 # Remove file or replace with your own
 
-Billy Rick:
-  name: Billy Rick
-  picture: /images/bio-photo-2.jpg
-  twitter: "@billyrick"
+Melissa Nunez:
+  name: Melissa Nunez
+  picture: /images/bio.jpg
+  # twitter: "@billyrick"
   links:
-    - title: Twitter
-      url: https://twitter.com/billyrick
-      icon: fab fa-twitter-square
-
-Cornelius Fiddlebone:
-  name: Cornelius Fiddlebone
-  picture: /images/bio-photo.jpg
-  twitter: corneliusfiddlebone
+    - title: Github
+      url: https://github.com/melissa-nunez
+      icon: fab fa-github
+    - title: Email
+      url: mn2824@columbia.edu
+      icon: fas fa-envelope-square
