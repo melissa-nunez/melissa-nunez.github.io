@@ -3,6 +3,8 @@ title: "Deep Phenotyping using K-means Clustering"
 date: 2018-04-23
 tags: [unsupervised learning, k-means, clustering, R]
 excerpt: "Unsupervised learning for Deep Phenotyping"
+header:
+  image: "/images/phenotyping.png"
 ---
 
 ## Data
@@ -32,8 +34,12 @@ Insert cluster sample size table for Both
 ```r
 ggplot(melt(pass.US.completers.fedinburgh[,c("patid","Cluster.TotalJoint",
 cigvars)], id=c('patid','Cluster.TotalJoint')), aes(x=variable,y=value,
-group=patid, colour=Cluster.TotalJoint))+ggtitle("Total Cigarettes for Joint Cluster")+stat_summary(aes(y = value,group = Cluster.TotalJoint), fun.y=mean,
-geom="line",size=2) + scale_x_discrete(labels=c("T1","T2","T3")) + facet_grid(. ~ Cluster.TotalJoint)
+group=patid, colour=Cluster.TotalJoint)) +
+ggtitle("Total Cigarettes for Joint Cluster") +
+stat_summary(aes(y = value,group = Cluster.TotalJoint), fun.y=mean,
+geom="line",size=2) +
+scale_x_discrete(labels=c("T1","T2","T3")) +
+facet_grid(. ~ Cluster.TotalJoint)
 ```
 
 ## Including Depression Variables
