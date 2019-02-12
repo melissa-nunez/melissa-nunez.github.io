@@ -18,9 +18,11 @@ Because results may differ by site, the analysis was stratified. The sample size
 Insert Sample size tables
 <img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
 
+Some participants did not have data for all three trimesters available. For this analysis, only those who did have all trimester data available were included.
+
 ## Clustering
 
-Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoked Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4. I included sample code for both the clusters and the visualization of varibles per cluster. The ggplot code is the same for both the drinking and smoking variables and per site.
+Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoked Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. I included sample code for both the clusters and the visualization of varibles per cluster. The ggplot code is the same for both the drinking and smoking variables and per site.
 
 ```r
 cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure ==
@@ -48,3 +50,4 @@ facet_grid(. ~ Cluster.TotalJoint)
 Insert US cluster ggplot
 
 ## Including Depression Variables
+After some discussion, it was decided that a depression variable could be used for clustering as well. At the beginning of the study, each participant was given the Edinburgh postnatal depression scale questionnaire and a depression score was calculated. This variable is not longitudinal, like the previous ones, and therefore posed a bit of a dilemma. It was decided that the same score should be used for each trimester, essentially treating it as longitudinal data, however the interpretation would be different. The cut off for non-exposed is a a score below 10. These patients are considered not depressed. 
