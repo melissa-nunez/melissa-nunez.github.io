@@ -11,10 +11,24 @@ It is important to identify the drinking/smoking patterns of women during pregna
 
 For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically stillbirth and SIDS.
 
-Because results may differ by site, the analysis was stratified.
+Because results may differ by site, the analysis was stratified. The sample size tables for each site are included.
 
+Insert Sample size tables
 <img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
 
 ## Clustering
 
-Since the women's demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoke Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4.
+Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoke Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4.
+
+```r
+cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure == 1,], timeInData = list(grep('TotCigsT',names(merge)),grep('TotalStdDrinksT',names(merge)),rep(181, 3)), time = c(1,2,3))
+kml3d(cld.joint.fedinburgh,nbClusters = 4:9)
+```
+
+Insert cluster sample size table for Both
+
+```r
+ggplot(melt(pass.US.completers.fedinburgh[,c("patid","Cluster.TotalJoint", cigvars)], id=c('patid','Cluster.TotalJoint')), aes(x=variable,y=value, group=patid, colour=Cluster.TotalJoint))+ggtitle("Total Cigarettes for Joint Cluster")+stat_summary(aes(y = value,group = Cluster.TotalJoint), fun.y=mean, geom="line",size=2) + scale_x_discrete(labels=c("T1","T2","T3")) + facet_grid(. ~ Cluster.TotalJoint)
+```
+
+## Including Depression Variables
