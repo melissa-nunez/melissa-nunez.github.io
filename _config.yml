@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Melissa Nuñez"
 title_separator          : "-"
-name                     : "Melissa Nunez"
+name                     : "Melissa Nuñez"
 description              : "Statistics and Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -106,15 +106,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Melissa Nunez"
+  name             : "Melissa Nuñez"
   avatar           : "/images/bio.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "M.S Candidate in Biostatistics"
   location         : "Bronx, NY"
   email            : "mn2824@columbia.edu"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:mn2824@columbia.edu
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/melissanuñez/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
