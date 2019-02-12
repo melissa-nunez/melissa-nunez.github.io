@@ -1,4 +1,5 @@
 ---
+layout: default
 title: About
 permalink: /about/
 ---
@@ -7,4 +8,4 @@ I am a M.S Candidate in Biostatistics at Columbia University's Mailman School of
 
 ---
 
-A list of my completed Data Camp certificates can be found [here](https://melissa-nunez.github.io/certificates).
+A list of my completed Data Camp course certificates can be found [here](https://melissa-nunez.github.io/certificates).
