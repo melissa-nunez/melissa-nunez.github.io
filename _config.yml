@@ -106,15 +106,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Melissa Nunez"
   avatar           : "/images/bio.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "M.S Candidate in Biostatistics"
-  location         : "New York"
-  email            :
+  location         : "Bronx, NY"
+  email            : "mn2824@columbia.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: "mn2824@columbia.edu"
+      # url: "mn2824@columbia.edu"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
