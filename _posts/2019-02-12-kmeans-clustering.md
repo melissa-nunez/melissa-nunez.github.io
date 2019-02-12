@@ -21,14 +21,19 @@ Insert Sample size tables
 Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoke Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4.
 
 ```r
-cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure == 1,], timeInData = list(grep('TotCigsT',names(merge)),grep('TotalStdDrinksT',names(merge)),rep(181, 3)), time = c(1,2,3))
+cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure ==
+1,], timeInData = list(grep('TotCigsT',names(merge)),grep('TotalStdDrinksT',names(merge)),rep(181,
+3)), time = c(1,2,3))
 kml3d(cld.joint.fedinburgh,nbClusters = 4:9)
 ```
 
 Insert cluster sample size table for Both
 
 ```r
-ggplot(melt(pass.US.completers.fedinburgh[,c("patid","Cluster.TotalJoint", cigvars)], id=c('patid','Cluster.TotalJoint')), aes(x=variable,y=value, group=patid, colour=Cluster.TotalJoint))+ggtitle("Total Cigarettes for Joint Cluster")+stat_summary(aes(y = value,group = Cluster.TotalJoint), fun.y=mean, geom="line",size=2) + scale_x_discrete(labels=c("T1","T2","T3")) + facet_grid(. ~ Cluster.TotalJoint)
+ggplot(melt(pass.US.completers.fedinburgh[,c("patid","Cluster.TotalJoint",
+cigvars)], id=c('patid','Cluster.TotalJoint')), aes(x=variable,y=value,
+group=patid, colour=Cluster.TotalJoint))+ggtitle("Total Cigarettes for Joint Cluster")+stat_summary(aes(y = value,group = Cluster.TotalJoint), fun.y=mean,
+geom="line",size=2) + scale_x_discrete(labels=c("T1","T2","T3")) + facet_grid(. ~ Cluster.TotalJoint)
 ```
 
 ## Including Depression Variables
