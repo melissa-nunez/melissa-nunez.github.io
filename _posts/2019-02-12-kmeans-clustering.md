@@ -20,4 +20,5 @@ Next,
 
 Because results may differ by site, the analysis was stratified. The following tables
 
+![alt]({{ site.url }}{{ site.baseurl }}/images/table1_SA.png)
 <img src="{{ site.url }}{{ site.baseurl }}/images/table1_SA.png" alt="">
