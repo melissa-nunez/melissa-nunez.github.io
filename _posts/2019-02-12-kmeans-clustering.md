@@ -20,5 +20,7 @@ Next,
 
 Because results may differ by site, the analysis was stratified. The following tables
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/Table1_SA.png)
-<img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="">
+<div class="image">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
+<div>Table 1: South Africa</div>
+</div>
