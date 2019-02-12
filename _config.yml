@@ -142,7 +142,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/melissa-nunez"
+      url: "https://github.com/melissa-nunez"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
