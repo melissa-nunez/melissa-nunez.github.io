@@ -20,7 +20,7 @@ Insert Sample size tables
 
 ## Clustering
 
-Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoke Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4.
+Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are "Total Cigarettes Smoked Per Trimester" and "Total Standard Drinks Per Trimester". It was pre-determined that the number of clusters would equal 4. I included sample code for both the clusters and the visualization of varibles per cluster. The ggplot code is the same for both the drinking and smoking variables and per site.
 
 ```r
 cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure ==
@@ -29,7 +29,7 @@ cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.f
 kml3d(cld.joint.fedinburgh,nbClusters = 4:9)
 ```
 
-Insert cluster sample size table for Both
+### South Africa
 
 ```r
 ggplot(melt(pass.US.completers.fedinburgh[,c("patid","Cluster.TotalJoint",
@@ -41,5 +41,10 @@ geom="line",size=2) +
 scale_x_discrete(labels=c("T1","T2","T3")) +
 facet_grid(. ~ Cluster.TotalJoint)
 ```
+<img src="{{ site.url }}{{ site.baseurl }}/images/kml_SA.png" alt="" class="center"> <img src="{{ site.url }}{{ site.baseurl }}/images/kml_SA2.png" alt="" class="center">
+
+### US
+
+Insert US cluster ggplot
 
 ## Including Depression Variables
