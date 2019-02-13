@@ -3,11 +3,18 @@ layout: single
 title: Data Camp Certificates
 permalink: /certificates/
 ---
-
+## Python Programming
 * [Introduction to Python](https://www.datacamp.com/statement-of-accomplishment/course/1b91953e60f3f6610174e70e9e8cd35f11b42c18)
+
+## SQL
+* [Intro to SQL for Data Science](https://www.datacamp.com/statement-of-accomplishment/course/af6b693e3e192d41d6e5e7a76e207f875247a878)
+
+## Analysis
+* [Sentiment Analysis in R: The Tidy Way](https://www.datacamp.com/statement-of-accomplishment/course/545e9dfb4664dd62b3d18aaf591faa75ea31da28)
+
+## R programming
 * [Introduction to R](https://www.datacamp.com/statement-of-accomplishment/course/a5b15a4427fcd051af1ddbf36dc342c820b000b6)
 * [Intermediate R](https://www.datacamp.com/statement-of-accomplishment/course/f314475a3b2fd88f042c7bc43e69811328672534)
-* [Intro to SQL for Data Science](https://www.datacamp.com/statement-of-accomplishment/course/af6b693e3e192d41d6e5e7a76e207f875247a878)
 * [Introduction to Tidyverse](https://www.datacamp.com/statement-of-accomplishment/course/c4f5f8ce02a88c07368e4fc0840814725f92fb4d)
 * [Data Visualization with ggplot2 (part 1)](https://www.datacamp.com/statement-of-accomplishment/course/80f930335a4114f050906fc372a80d126cfe73b3)
 * [Data Visualization with ggplot2 (part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)

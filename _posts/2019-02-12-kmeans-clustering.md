@@ -50,4 +50,12 @@ facet_grid(. ~ Cluster.TotalJoint)
 Insert US cluster ggplot
 
 ## Including Depression Variables
-After some discussion, it was decided that a depression variable could be used for clustering as well. At the beginning of the study, each participant was given the Edinburgh postnatal depression scale questionnaire and a depression score was calculated. This variable is not longitudinal, like the previous ones, and therefore posed a bit of a dilemma. It was decided that the same score should be used for each trimester, essentially treating it as longitudinal data, however the interpretation would be different. The cut off for non-exposed is a a score below 10. These patients are considered not depressed. 
+After some discussion, it was decided that a depression variable could be used for clustering as well. At the beginning of the study, each participant was given the Edinburgh postnatal depression scale questionnaire and a depression score was calculated. Unlike drinking and smoking, this variable is not longitudinal. This posed a bit of a dilemma. It was decided that the same score should be used for each trimester, essentially treating it as longitudinal data, however the interpretation would be different. The cut off for non-exposed is a a score below 10. These patients are considered not depressed.
+
+### South Africa
+
+Insert cluster images
+
+### US
+
+Insert cluster images
