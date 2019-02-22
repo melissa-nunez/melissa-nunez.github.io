@@ -181,7 +181,7 @@ The most frequently used words along with its sentiment for this song:
 
 ## Conclusion
 
-Overall, if you prefer slower songs like I do, then then most heart-breaking song for you would be Bleeding Love while the more romantic one would be You're Beautiful. I definitely enjoyed having bleeding love on repeat for Valentine's Day.
+Overall, if you prefer slower songs like I do, then the most heart-breaking song for you would be Bleeding Love while the more romantic one would be You're Beautiful. I definitely enjoyed having bleeding love on repeat for Valentine's Day.
 
 Spotify's API is a great resource and there are many ways in which it can be used. I will link a few other projects (from which I was inspired) that have used the API. It is also a great way to familiarize yourself with sentiment analysis.
 
