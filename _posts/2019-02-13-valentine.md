@@ -187,6 +187,5 @@ Spotify's API is a great resource and there are many ways in which it can be use
 
 If interested, make sure to check these out:
 
-[Blue Christmas: A data-driven search for the most depressing Christmas song](https://caitlinhudon.com/2017/12/22/blue-christmas/) - Caitlin Hudon
-
-[fitteR happieR](https://www.rcharlie.com/post/fitter-happier/) - RCharlie
+* [Blue Christmas: A data-driven search for the most depressing Christmas song](https://caitlinhudon.com/2017/12/22/blue-christmas/) - Caitlin Hudon
+* [fitteR happieR](https://www.rcharlie.com/post/fitter-happier/) - RCharlie
