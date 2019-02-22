@@ -4,7 +4,6 @@ date: 2018-04-23
 tags: [unsupervised learning, k-means, clustering, R]
 excerpt: "Unsupervised learning for Deep Phenotyping"
 header:
-  image: "/images/phenotyping.png"
 ---
 
 ## Data
