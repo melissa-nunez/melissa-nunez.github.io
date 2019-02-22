@@ -1,5 +1,5 @@
 ---
-title: "Clustering and Sentiment Analysis of Spotify's Top Valentine's Day Songs"
+title: "Clustering and Sentiment Analysis of Spotify's Valentine's Day Songs"
 date: 2019-02-13
 tags: [unsupervised learning, k-means, clustering, R, sentiment, NLP]
 excerpt: "Clustering Spotify's Valentine's Day playlist followed by sentiment analysis"
@@ -72,6 +72,8 @@ Spotify's description for all of the available features can be found [here](http
 **Energy** is defined as "a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy".
 
 Although it makes sense that sad songs would have low valence and low energy, it is important to keep in mind that there are many love songs that are romantic and happy yet are low in energy and valence (for example True Colors, both the Cyndi Lauper and Anna Kendrick versions). Therefore, I decided to cluster the songs into two groups based on their valence and energy. One cluster is made up of low valence and low energy while the other is high valence and high energy.
+
+I used k-means clustering:
 
 ```r
 library(NbClust)
