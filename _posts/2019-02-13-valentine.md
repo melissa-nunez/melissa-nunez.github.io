@@ -84,7 +84,7 @@ ggplot(Final_Dataset, aes(x = valence, y = energy, color = factor(clusters))) + 
 ```
 The following ggplot shows the valence vs energy for each song:
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/valencevsenergy.png" alt="" class="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/valencevsenergy.png" alt="" align="middle">
 
 Cluster 1 is the low energy & low valence cluster while cluster 2 is the high energy and high valence cluster.
 
@@ -130,7 +130,7 @@ These are the results:
 
 **The top slow and sad songs are:**
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/slowsad.png" alt="" class="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/slowsad.png" alt="" align="middle">
 
 With the saddest song being **Leona Lewis' Bleeding Love**.
 
