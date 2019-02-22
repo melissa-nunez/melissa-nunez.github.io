@@ -13,7 +13,7 @@ The connotation for Valentine's Day can differ depending on who you ask. Althoug
 
 The first step was to get access to [Spotify's API](https://developer.spotify.com/documentation/web-api/). Next, create a developer's account to access the API [here](https://developer.spotify.com/dashboard/). For further instructions on setting up, you can visit the spotifyr website [here](https://www.rcharlie.com/spotifyr/index.html).
 
-To install and load the package, use the following:
+To install and load the package in R, use the following:
 
 ```r
 devtools::install_github('charlie86/spotifyr')
@@ -21,8 +21,10 @@ library(spotifyr)
 ```
 
 ## Data
-There is a plethora of Valentine's Day romance songs that I could have used for this analysis. I did plenty of research on "Top Romance Songs" & "Top Valentine's Day Songs" prior to beginning, however I decided on Spotify's own Valentine's Day playlist. This playlist is made up of 90 songs.
 
+There is a plethora of Valentine's Day romance songs that I could have used for this analysis. I did plenty of research on "Top Romance Songs" & "Top Valentine's Day Songs" prior to beginning, however I decided on Spotify's own Valentine's Day playlist which Spotify describes as "The most romantic tracks of all time featuring today's hits and all the classics". This playlist is made up of 90 songs.
+
+### Features
 The Spoitfy API gives information on a songs danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, and tempo. I saved the Valentine's Day playlist as my own and then accessed it through the API. I then pulled out the tracks from the playlist and extracted the features.
 
 This is the code used:
@@ -37,3 +39,129 @@ valentine_tracks <- get_playlist_tracks(valentines_playlist)
 # Get features
 track_features <- get_track_audio_features(valentine_tracks)
 ```
+
+### lyrics
+The API also has a fantastic function that allows you to connect with genius and pull up lyrics for any given song. I used this function to retrieve the lyrics for all of the songs.
+
+The code to retrieve the lyrics is
+
+```r
+genius_lyrics(artist = , song = , info = "all")
+```
+
+However, in order for the lyrics to be found, there are some song titles that need to be tweaked prior to using the function. For example, James Blunt's song "You're Beautiful" includes an apostrophe in the song title. When including the apostrophe in the song title, the genius function does not identify which song it is and returns an error. Therefore, I had to manually change some of the song titles. To identify which song title's needed some editing, I created a function that returns the song lyrics if the song is found and NA if there is an error message, then I looped the function through my set of songs and created a list where each item is either the song lyrics or NA if the lyrics could not be found.
+
+If needed, this is the code:
+```r
+get_lyrics <- function(artist, name) {
+  tryCatch({lrcs <- genius_lyrics(artist = artist, song = name, info = "simple")[1]}, error=function(e) {lrcs <<- NA})
+  lrcs
+}
+
+lyrics <-list()
+for (i in 1:90) {
+  lyrics <- append(lyrics, get_lyrics(artists[i], song[i]))
+}
+```
+
+I then identified where the NA's are and fixed the corresponding song titles. After successfully acquiring all of the song lyrics and features, I prepared for my analysis.
+
+## Clustering
+Spotify's description for all of the available features can be found [here](https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/).
+
+**Valence** is defined as "a measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry)".
+
+**Energy** is defined as "a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy".
+
+Although it makes sense that sad songs would have low valence and low energy, it is important to keep in mind that there are many love songs that are romantic and happy yet are low in energy and valence (for example True Colors, both the Cyndi Lauper and Anna Kendrick versions). Therefore, I decided to cluster the songs into two groups based on their valence and energy. One cluster is made up of low valence and low energy while the other is high valence and high energy.
+
+```r
+library(NbClust)
+nc <- NbClust(Final_Dataset[,c(9,17)], min.nc=2, max.nc=15, method="kmeans")
+
+# Plot valence vs energy
+ggplot(Final_Dataset, aes(x = valence, y = energy, color = factor(clusters))) + geom_point()
+```
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/valencevsenergy.png" alt="" class="center">
+
+Cluster 1 is the low energy & low valence cluster while cluster 2 is the high energy and high valence cluster.
+
+## Cleaning the lyrics and identifying sad words
+
+Next, I cleaned up the lyrics for each song by unnesting them and removing stop words.
+
+```r
+library(tidytext)
+
+# Unnest lyrics
+lyric_tokens <- lyrics %>% unnest_tokens(word,lyric)
+
+# Remove stop words
+clean_lyrics <- lyric_tokens %>% anti_join(get_stopwords())
+```
+
+The unnest_tokens function separates the lyrics into a one word per line format. This is necessary in order to calculate the percentage of sad words per song.
+
+Using the "nrc" lexicon that is available in the tidytext package, I calculated the amount of sad words and happy words in each song as follows:
+
+```r
+# Extract nrc lexicon
+nrcjoy <- get_sentiments("nrc") %>% filter(sentiment == "joy")
+nrcsad <- get_sentiments("nrc") %>% filter(sentiment == "sadness")
+
+total_words_per_song <- clean_lyrics %>% count(track_title) %>% rename(total_count = n)
+
+total_happy_words_per_song <- clean_lyrics %>% inner_join(nrcjoy) %>% count(track_title) %>% rename(joy_count = n)
+
+total_sad_words_per_song <- clean_lyrics %>% inner_join(nrcsad) %>% count(track_title) %>% rename(sad_count = n)
+```
+
+I then used the word count to calculate the percentage of happy and sad words per song.
+
+## Identifying the Songs
+
+There are many different ways that I considered when it came to identifying the saddest love song. However, as previously mentioned, there are many beautiful, romantic songs that have low valence and low energy, and vice-versa for the happy songs. So I decided to identify the happiest and saddest love songs within each cluster based on happy and sad word percentages. To identify the saddest song, I chose the one with the highest net score of `sad_percent - joy_percent`, and to identify the happiest song I chose the one with the highest `joy-percent - sad_percent` score.
+
+These are the results:
+
+### Sad Songs
+
+The top slow and sad songs are:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/slowsad.png" alt="" class="center">
+
+With the saddest song being **Leona Lewis' Bleeding Love**.
+
+#### Sentiment Analysis
+
+I went ahead and calculated the most frequently used words along with its sentiment for this song:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/leonalewis.png" alt="" class="center">
+
+The top upbeat but sad songs are:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/upbeatsad.png" alt="" class="center">
+
+With the saddest upbeat song being **Fleetwood Mac's Landslide**.
+
+#### Sentiment Analysis
+
+The most frequently used words along with its sentiment for this song:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/landslide.png" alt="" class="center">
+
+
+### Happy Songs
+
+The top slow but happy songs are:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/slowhappy.png" alt="" class="center">
+
+With the happiest slow song being **James Blunt's You're Beautiful**.
+
+The top upbeat and happy songs are:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/upbeathappy.png" alt="" class="center">
+
+With the happiest upbeat song being **The Beach Boys' Wouldn't It Be Nice?**.
