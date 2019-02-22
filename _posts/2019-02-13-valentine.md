@@ -7,7 +7,7 @@ header:
   image: "/images/hearts.jpg"
 ---
 
-The connotation for Valentine's Day can differ depending on who you ask. Although it is suppose to be a joyous day for lovers to express their affection towards one another, it can also be a depressing holiday for those you have no one to share it with. So this year, as someone who fell into the later category, I decided to celebrate the holiday by analyzing Spotify's Valentine's Day playlist with the goal of identifying which song is the saddest Valentine's Day song. I achieved this by clustering the playlist into songs with low valence and low energy vs those with high valence and high energy and then filtering based on the percentage of sad words found in the lyrics.
+The connotation for Valentine's Day can differ depending on who you ask. Although it is suppose to be a joyous day for lovers to express their affection towards one another, it can also be a depressing holiday for those you have no one to share it with. So this year, as someone who fell into the later category, I decided to celebrate the holiday by analyzing Spotify's Valentine's Day playlist with the goal of identifying which song is the saddest (i.e heart-break) love song and which song is the happiest (i.e. most romantic) love song. I achieved this by clustering the playlist into songs with low valence and low energy vs those with high valence and high energy and then filtering based on the percentage of sad words found in the lyrics.
 
 ### Installing
 
@@ -22,7 +22,7 @@ library(spotifyr)
 
 ## Data
 
-There is a plethora of Valentine's Day romance songs that I could have used for this analysis. I did plenty of research on "Top Romance Songs" & "Top Valentine's Day Songs" prior to beginning, however I decided on Spotify's own Valentine's Day playlist which Spotify describes as "The most romantic tracks of all time featuring today's hits and all the classics". This playlist is made up of 90 songs.
+There is a plethora of Valentine's Day romance songs that I could have used for this analysis. I did plenty of research on "Top Romantic Songs" & "Top Valentine's Day Songs" prior to beginning, however I decided on Spotify's own Valentine's Day playlist which Spotify describes as "The most romantic tracks of all time featuring today's hits and all the classics". This playlist is made up of 90 songs.
 
 ### Features
 The Spoitfy API gives information on a songs danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, and tempo. I saved the Valentine's Day playlist as my own and then accessed it through the API. I then pulled out the tracks from the playlist and extracted the features.
@@ -40,10 +40,8 @@ valentine_tracks <- get_playlist_tracks(valentines_playlist)
 track_features <- get_track_audio_features(valentine_tracks)
 ```
 
-### lyrics
+### Lyrics
 The API also has a fantastic function that allows you to connect with genius and pull up lyrics for any given song. I used this function to retrieve the lyrics for all of the songs.
-
-The code to retrieve the lyrics is
 
 ```r
 genius_lyrics(artist = , song = , info = "all")
@@ -82,6 +80,7 @@ nc <- NbClust(Final_Dataset[,c(9,17)], min.nc=2, max.nc=15, method="kmeans")
 # Plot valence vs energy
 ggplot(Final_Dataset, aes(x = valence, y = energy, color = factor(clusters))) + geom_point()
 ```
+The following ggplot shows the valence vs energy for each song:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/valencevsenergy.png" alt="" class="center">
 
@@ -127,7 +126,7 @@ These are the results:
 
 ### Sad Songs
 
-The top slow and sad songs are:
+**The top slow and sad songs are:**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/slowsad.png" alt="" class="center">
 
@@ -139,7 +138,7 @@ I went ahead and calculated the most frequently used words along with its sentim
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/leonalewis.png" alt="" class="center">
 
-The top upbeat but sad songs are:
+**The top upbeat but sad songs are:**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/upbeatsad.png" alt="" class="center">
 
@@ -154,14 +153,28 @@ The most frequently used words along with its sentiment for this song:
 
 ### Happy Songs
 
-The top slow but happy songs are:
+**The top slow but happy songs are:**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/slowhappy.png" alt="" class="center">
 
 With the happiest slow song being **James Blunt's You're Beautiful**.
 
-The top upbeat and happy songs are:
+#### Sentiment Analysis
+
+The most frequently used words along with its sentiment for this song:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/jamesblunt.png" alt="" class="center">
+
+**The top upbeat and happy songs are:**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/upbeathappy.png" alt="" class="center">
 
-With the happiest upbeat song being **The Beach Boys' Wouldn't It Be Nice?**.
+With the happiest upbeat song being **The Beach Boys' Wouldn't It Be Nice?**
+
+#### Sentiment Analysis
+
+The most frequently used words along with its sentiment for this song:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/beachboys.png" alt="" class="center">
+
+## Conclusion
