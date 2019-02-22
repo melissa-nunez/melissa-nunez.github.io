@@ -178,3 +178,13 @@ The most frequently used words along with its sentiment for this song:
 <img src="{{ site.url }}{{ site.baseurl }}/images/beachboys.png" alt="" class="center">
 
 ## Conclusion
+
+Overall, if you prefer slower songs like I do, then then most heart-breaking song for you would be Bleeding Love while the more romantic one would be You're Beautiful. I definitely enjoyed having bleeding love on repeat for Valentine's Day.
+
+Spotify's API is a great resource and there are many ways in which it can be used. I will link a few other projects (from which I was inspired) that have used the API. It is also a great way to familiarize yourself with sentiment analysis.
+
+If interested, make sure to check these out:
+
+[Blue Christmas: A data-driven search for the most depressing Christmas song](https://caitlinhudon.com/2017/12/22/blue-christmas/) - Caitlin Hudon
+
+[fitteR happieR](https://www.rcharlie.com/post/fitter-happier/) - RCharlie
