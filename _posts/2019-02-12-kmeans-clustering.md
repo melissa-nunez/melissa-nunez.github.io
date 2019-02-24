@@ -25,9 +25,9 @@ Since the women demonstrate dynamic drinking and smoking habits, the first step 
 
 * Total Cigarettes Smoked Per Trimester
 * Total Standard Drinks Per Trimester
-* A "mood" variable made up of edinburgh, fedinburgh, and anxiety scores
+* A "mood" variable made up of the women's fedinburgh, state anxiety, and trait anxiety scores
 
-It was pre-determined that the number of clusters would equal 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 10, and for the edinburgh and anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). I included sample code for both the clusters and the visualization of varibles per cluster. The ggplot code is the same for both the drinking and smoking variables and per site.
+It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 13, and for state and trait anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). I included sample code for both the clusters and the visualization of varibles per cluster. The ggplot code is the same for both the drinking and smoking variables and per site.
 
 ```r
 cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure ==
