@@ -58,9 +58,7 @@ I have included descriptive statistics for the variables of interest stratified 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/DescStats.png" alt="" class="center">
 
-### Outcome Differences
-
-#### Visualizing
+### Visualizing Outcome Variables
 
 I began by creating boxplots of each outcome variable, per cluster, to visually inspect the distribution and see if any major differences stand out.
 
@@ -70,8 +68,15 @@ To reiterate, the outcome variables being analyzed are:
 * child birth weight in pounds
 * child heart rate in the third trimester
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/BP_GA.png" alt="" class="center">
 
-I did ANOVA analysis to evaluate any differences in the outcome variables between the clusters. The first step is to check the homogeneity of variance between the clusters using levene's test.
+<img src="{{ site.url }}{{ site.baseurl }}/images/BP_Weight.png" alt="" class="center">
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/BP_heart.png" alt="" class="center">
+
+### ANOVA Test for Differences
+
+I did ANOVA analysis to evaluate any differences in the outcome variables between the clusters. The first step is to check the homogeneity of variance between the clusters using Levene's test.
 
 The null hypothesis being tested is that there is homogeneity of variance between the clusters versus the alternative that states there is no homogeneity of variance. None of the p-values were significant, and therefore we will assume homogeneity of variance.
 

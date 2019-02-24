@@ -1,5 +1,5 @@
 ---
-title: "Clustering and Sentiment Analysis of Spotify's Valentine's Day Songs"
+title: "Clustering and Sentiment Analysis of Spotify's Valentine's Day Playlist"
 date: 2019-02-13
 tags: [unsupervised learning, k-means, clustering, R, sentiment, NLP]
 excerpt: "Clustering Spotify's Valentine's Day playlist followed by sentiment analysis"
