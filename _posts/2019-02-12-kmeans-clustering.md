@@ -75,9 +75,9 @@ To reiterate, the outcome variables being analyzed are:
 
 ### ANOVA Test for Differences
 
-I did ANOVA analysis to evaluate any differences in the outcome variables between the clusters. The first step is to check the homogeneity of variance between the clusters using Levene's test.
+ANOVA analysis was done to evaluate any differences in the outcome variables between the clusters. The first step is to check the homogeneity of variance between the clusters using Levene's test.
 
-The null hypothesis being tested is that there is homogeneity of variance between the clusters versus the alternative that states there is no homogeneity of variance. None of the p-values were significant, and therefore we will assume homogeneity of variance.
+The null hypothesis for Levene's test is that there is homogeneity of variance between the clusters versus the alternative that states there is no homogeneity of variance. None of the p-values were significant, and therefore we will assume homogeneity of variance.
 
 I have included sample code.
 
@@ -85,4 +85,14 @@ I have included sample code.
 library(car)
 
 leveneTest(hrmean1 ~ Cluster.TotalJoint, data = outcome_set)
+
+anova.hrmean <- aov(hrmean1 ~ Cluster.TotalJoint, data = outcome_set)
+
+summary(anova.hrmean)
 ```
+
+I included the ANOVA results for all outcome variables.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/ANOVA.png" alt="" class="center">
+
+All three have p-values smaller than 0.05, and therefore I used Tukey's Multiple Comparison Correction method to identify which clusters differ and if they are still significant after the multiple comparison correction.
