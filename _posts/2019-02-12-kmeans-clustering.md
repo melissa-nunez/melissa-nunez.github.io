@@ -14,7 +14,6 @@ For this project, I analyzed data from the Safe Passage Study, also known as the
 
 Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site. The sample size table is included.
 
-Insert Sample size tables
 <img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
 
 Some participants did not have data for all three trimesters available. For this analysis, only those who did have all trimester data available were included.
