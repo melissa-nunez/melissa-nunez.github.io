@@ -95,4 +95,4 @@ I included the ANOVA results for all outcome variables.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/ANOVA.png" alt="" class="center">
 
-All three have p-values smaller than 0.05, and therefore I used Tukey's Multiple Comparison Correction method to identify which clusters differ and if they are still significant after the multiple comparison correction.
+All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Comparison Correction to identify which clusters differ. 
