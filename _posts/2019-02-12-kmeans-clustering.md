@@ -98,7 +98,27 @@ I included the ANOVA results for all outcome variables.
 All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Comparison Correction to identify which clusters differ.
 
 #### Heart Rate, Gestational Age, and Birth Weight
-<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_GA.png" alt="" class="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_Comparison.png" alt="" class="center">
 
+#### Heart Rate
+For the third trimester heart rate, the differing clusters are:
 
-From the tables, it is
+* cluster 3 and 1
+* unexposed and cluster 2
+
+From the data,
+
+#### Gestational age
+
+For the gestational age outcome, the differing clusters are:
+
+* clusters 2 and 1
+* clusters 3 and 1
+
+#### Birth Weight
+
+For the birth weight outcome, the differing clusters are:
+
+* clusters 2 and 1
+* clusters 3 and 1
+*
