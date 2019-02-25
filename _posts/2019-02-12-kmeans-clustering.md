@@ -8,9 +8,9 @@ header:
 
 ## Data
 
-Identifying the drinking/smoking patterns of women during pregnancy isimportant in order to better understand the risk of possible postnatal outcomes.
+Identifying the drinking/smoking patterns of women during pregnancy is important in order to better understand the risk of possible postnatal outcomes.
 
-For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically child heart rate at birth, gestational age in weeks, and baby weight at birth (in pounds).
+For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds).
 
 Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site. The sample size table is included.
 
@@ -95,4 +95,15 @@ I included the ANOVA results for all outcome variables.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/ANOVA.png" alt="" class="center">
 
-All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Comparison Correction to identify which clusters differ. 
+All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Comparison Correction to identify which clusters differ.
+
+#### Heart Rate
+<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_HRmean.png" alt="" class="center">
+
+#### Gestational Age
+<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_GA.png" alt="" class="center">
+
+#### Birth Weight
+<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_Weight.png" alt="" class="center">
+
+From the tables, it is 
