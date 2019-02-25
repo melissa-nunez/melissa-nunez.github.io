@@ -106,4 +106,16 @@ All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Com
 #### Birth Weight
 <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_Weight.png" alt="" class="center">
 
-From the tables, it is 
+<div class="row">
+  <div class="column">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_HRmean.png" alt="Heart Rate" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_GA.png" alt="Gestational Age" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_HRmean.png" alt="Birth Weight" style="width:100%">
+  </div>
+</div>
+
+From the tables, it is
