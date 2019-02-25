@@ -97,25 +97,8 @@ I included the ANOVA results for all outcome variables.
 
 All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Comparison Correction to identify which clusters differ.
 
-#### Heart Rate
-<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_HRmean.png" alt="" class="center">
-
-#### Gestational Age
+#### Heart Rate, Gestational Age, and Birth Weight
 <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_GA.png" alt="" class="center">
 
-#### Birth Weight
-<img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_Weight.png" alt="" class="center">
-
-<div class="row">
-  <div class="column">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_HRmean.png" alt="Heart Rate" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_GA.png" alt="Gestational Age" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_HRmean.png" alt="Birth Weight" style="width:100%">
-  </div>
-</div>
 
 From the tables, it is
