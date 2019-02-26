@@ -11,7 +11,7 @@ The connotation for Valentine's Day can differ depending on who you ask. Althoug
 
 ### Installing
 
-The first step was to get access to [Spotify's API](https://developer.spotify.com/documentation/web-api/). Next, create a developer's account to access the API [here](https://developer.spotify.com/dashboard/). For further instructions on setting up, you can visit the spotifyr website [here](https://www.rcharlie.com/spotifyr/index.html).
+The first step is to get access to [Spotify's API](https://developer.spotify.com/documentation/web-api/). Next, create a developer's account to access the API [here](https://developer.spotify.com/dashboard/). For further instructions on setting up, you can visit the spotifyr website [here](https://www.rcharlie.com/spotifyr/index.html).
 
 To install and load the package in R, use the following:
 
@@ -22,7 +22,7 @@ library(spotifyr)
 
 ## Data
 
-There is a plethora of Valentine's Day romance songs that I could have used for this analysis. I did plenty of research on "Top Romantic Songs" & "Top Valentine's Day Songs" prior to beginning, however I decided on Spotify's own Valentine's Day playlist which Spotify describes as "The most romantic tracks of all time featuring today's hits and all the classics". This playlist is made up of 90 songs.
+There is a plethora of romantic songs that I could have used for this analysis. I did plenty of research on "Top Romantic Songs" & "Top Valentine's Day Songs" prior to beginning, however I decided on Spotify's own Valentine's Day playlist which Spotify describes as "The most romantic tracks of all time featuring today's hits and all the classics." This playlist is made up of 90 songs.
 
 ### Features
 The Spoitfy API gives information on a songs danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, and tempo. I saved the Valentine's Day playlist as my own and then accessed it through the API. I then pulled out the tracks from the playlist and extracted the features.
@@ -41,15 +41,15 @@ track_features <- get_track_audio_features(valentine_tracks)
 ```
 
 ### Lyrics
-The API also has a fantastic function that allows you to connect with genius and pull up lyrics for any given song. I used this function to retrieve the lyrics for all of the songs.
+The API also has a fantastic function that allows you to connect with genius and extract lyrics for any given song. I used this function to retrieve the lyrics for all of the songs.
 
 ```r
 genius_lyrics(artist = , song = , info = "all")
 ```
 
-However, in order for the lyrics to be found, there are some song titles that need to be tweaked prior to using the function. For example, James Blunt's song "You're Beautiful" includes an apostrophe in the song title. When including the apostrophe in the song title, the genius function does not identify which song it is and returns an error. Therefore, I had to manually change some of the song titles. To identify which song title's needed some editing, I created a function that returns the song lyrics if the song is found and NA if there is an error message, then I looped the function through my set of songs and created a list where each item is either the song lyrics or NA if the lyrics could not be found.
+However, in order for the lyrics to be found, there are some song titles that needed to be tweaked prior to using the function. For example, James Blunt's song "You're Beautiful" includes an apostrophe in the song title. When including the apostrophe in the song title, the genius function does not identify which song it is and returns an error. Therefore, I had to manually change some of the song titles. To identify which song title's needed some editing, I created a function that returns the song lyrics if the song is found and NA if there is an error message, then I looped the function through my set of songs and created a list where each item is either the song lyrics or NA if the lyrics could not be found.
 
-If needed, this is the code:
+Code is as follows:
 ```r
 get_lyrics <- function(artist, name) {
   tryCatch({lrcs <- genius_lyrics(artist = artist, song = name, info = "simple")[1]}, error=function(e) {lrcs <<- NA})
@@ -124,7 +124,7 @@ I then used the word count to calculate the percentage of happy and sad words pe
 
 ## Identifying the Songs
 
-There are many different ways that I considered when it came to identifying the saddest love song. However, as previously mentioned, there are many beautiful, romantic songs that have low valence and low energy, and vice-versa for the happy songs. So I decided to identify the happiest and saddest love songs within each cluster based on happy and sad word percentages. To identify the saddest song, I chose the one with the highest net score of `sad_percent - joy_percent`, and to identify the happiest song I chose the one with the highest `joy-percent - sad_percent` score.
+There are many different ways that I considered when it came to identifying the saddest love song. However, as previously mentioned, there are many beautiful, romantic songs that have low valence and low energy, and vice-versa for the happy songs. I decided to identify the happiest and saddest love songs within each cluster based on happy and sad word percentages. To identify the saddest song, I chose the one with the highest net score of `sad_percent - joy_percent`, and to identify the happiest song I chose the one with the highest `joy-percent - sad_percent` score.
 
 These are the results:
 
