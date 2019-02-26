@@ -14,7 +14,9 @@ For this project, I analyzed data from the Safe Passage Study, also known as the
 
 Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site. The sample size table is included.
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
+</p>
 
 Some participants did not have data for all three trimesters available. For this analysis, only those who did have all trimester data available were included.
 
@@ -57,9 +59,11 @@ I have included descriptive statistics for the variables of interest stratified 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/DescStats.png" alt="" class="center">
 
+I defined the unexposed group (N) as those who did not smoke, did not drink, and did not experience any anxiety or depression during pregnancy. The clustering shows that cluster 1 is a low smoking, low alcohol consumption, and low depression group. Cluster 2 is a low alcohol consumption, moderate smoking, and high anxiety group. Cluster 3 is a low alcohol consumption, high smoking, and moderate anxiety group. Last, cluster 4 is the more severe group with high smoking, high alcohol consumption, and moderate anxiety and depression.
+
 ### Visualizing Outcome Variables
 
-I began by creating boxplots of each outcome variable, per cluster, to visually inspect the distribution and see if any major differences stand out.
+To visualize the outcomes per cluster, I began by creating boxplots of each outcome variable. This allows me to visually inspect the distribution and see if any major differences stand out.
 
 To reiterate, the outcome variables being analyzed are:
 
@@ -130,6 +134,3 @@ For the birth weight outcome, the differing clusters are:
 
 ### Summary
 The goal is to identify wether there are different mean outcomes between the clusters and, specifically, the unexposed group. The unexposed group has a significantly higher heart rate mean than cluster 2, at an alpha level of 0.05, with a p-value of 0.04916. For gestational age, the unexposed group has a significantly higher gestational age in weeks than cluster 3, at an alpha level of 0.05, with a p-value of 0.00077. For birth weight, the unexposed group has a significantly higher birth weight than all four clusters, at an alpha level of 0.05. Although the analysis is exploratory, it seems that smoking and drinking may lead to changes in gestational age, birth weight, and heart rate.
-
-### Limitations
-For now, confounders have not been considered
