@@ -105,8 +105,9 @@ For the third trimester heart rate, the differing clusters are:
 
 * cluster 3 and 1
 * unexposed and cluster 2
+* unexposed and cluster 3
 
-From the data,
+From the data, the unexposed cluster has a significantly higher heart rate mean than cluster 2, at an alpha level of 0.05, with a p-value of 0.04916.
 
 #### Gestational age
 
@@ -114,11 +115,23 @@ For the gestational age outcome, the differing clusters are:
 
 * clusters 2 and 1
 * clusters 3 and 1
+* unexposed and cluster 3
+
 
 #### Birth Weight
 
 For the birth weight outcome, the differing clusters are:
 
-* clusters 2 and 1
 * clusters 3 and 1
-*
+* clusters 4 and 1
+* unexposed and cluster 1
+* clusters 3 and 2
+* unexposed and cluster 2
+* unexposed and cluster 3
+* unexposed and cluster 4
+
+### Summary
+The goal is to identify wether there are different mean outcomes between the clusters and, specifically, the unexposed group. The unexposed group has a significantly higher heart rate mean than cluster 2, at an alpha level of 0.05, with a p-value of 0.04916. For gestational age, the unexposed group has a significantly higher gestational age in weeks than cluster 3, at an alpha level of 0.05, with a p-value of 0.00077. For birth weight, the unexposed group has a significantly higher birth weight than all four clusters, at an alpha level of 0.05. Although the analysis is exploratory, it seems that smoking and drinking may lead to changes in gestational age, birth weight, and heart rate.
+
+### Limitations
+For now, confounders have not been considered
