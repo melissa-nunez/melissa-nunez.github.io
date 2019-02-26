@@ -84,7 +84,9 @@ ggplot(Final_Dataset, aes(x = valence, y = energy, color = factor(clusters))) + 
 ```
 The following ggplot shows the valence vs energy for each song:
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/valencevsenergy.png" alt="" align="middle">
+</p>
 
 Cluster 1 is the low energy & low valence cluster while cluster 2 is the high energy and high valence cluster.
 
@@ -130,7 +132,9 @@ These are the results:
 
 **The top slow and sad songs are:**
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/slowsad.png" alt="" align="middle">
+</p>
 
 With the saddest song being **Leona Lewis' Bleeding Love**.
 
@@ -138,11 +142,15 @@ With the saddest song being **Leona Lewis' Bleeding Love**.
 
 I went ahead and calculated the most frequently used words along with its sentiment for this song:
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/leonalewis.png" alt="" class="center">
+</p>
 
 **The top upbeat but sad songs are:**
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/upbeatsad.png" alt="" class="center">
+</p>
 
 With the saddest upbeat song being **Fleetwood Mac's Landslide**.
 
@@ -150,14 +158,17 @@ With the saddest upbeat song being **Fleetwood Mac's Landslide**.
 
 The most frequently used words along with its sentiment for this song:
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/landslide.png" alt="" class="center">
-
+</p>
 
 ### Happy Songs
 
 **The top slow but happy songs are:**
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/slowhappy.png" alt="" class="center">
+</p>
 
 With the happiest slow song being **James Blunt's You're Beautiful**.
 
@@ -165,11 +176,15 @@ With the happiest slow song being **James Blunt's You're Beautiful**.
 
 The most frequently used words along with its sentiment for this song:
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/jamesblunt.png" alt="" class="center">
+</p>
 
 **The top upbeat and happy songs are:**
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/upbeathappy.png" alt="" class="center">
+</p>
 
 With the happiest upbeat song being **The Beach Boys' Wouldn't It Be Nice?**
 
@@ -177,7 +192,9 @@ With the happiest upbeat song being **The Beach Boys' Wouldn't It Be Nice?**
 
 The most frequently used words along with its sentiment for this song:
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/beachboys.png" alt="" class="center">
+</p>
 
 ## Conclusion
 

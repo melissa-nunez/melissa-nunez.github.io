@@ -49,15 +49,23 @@ geom="line",size=2) +
 scale_x_discrete(labels=c("T1","T2","T3")) +
 facet_grid(. ~ Cluster.TotalJoint)
 ```
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/kml_SA.png" alt="" class="center">
+</p>
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/kml_SA2.png" alt="" class="center">
+</p>
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/kml_SA3.png" alt="" class="center">
+</p>
 
 I have included descriptive statistics for the variables of interest stratified by cluster.
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/DescStats.png" alt="" class="center">
+</p>
 
 I defined the unexposed group (N) as those who did not smoke, did not drink, and did not experience any anxiety or depression during pregnancy. The clustering shows that cluster 1 is a low smoking, low alcohol consumption, and low depression group. Cluster 2 is a low alcohol consumption, moderate smoking, and high anxiety group. Cluster 3 is a low alcohol consumption, high smoking, and moderate anxiety group. Last, cluster 4 is the more severe group with high smoking, high alcohol consumption, and moderate anxiety and depression.
 
@@ -71,11 +79,17 @@ To reiterate, the outcome variables being analyzed are:
 * child birth weight in pounds
 * child heart rate in the third trimester
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/BP_GA.png" alt="" class="center">
+</p>
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/BP_Weight.png" alt="" class="center">
+</p>
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/BP_heart.png" alt="" class="center">
+</p>
 
 ### ANOVA Test for Differences
 
@@ -97,12 +111,16 @@ summary(anova.hrmean)
 
 I included the ANOVA results for all outcome variables.
 
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/ANOVA.png" alt="" class="center">
+</p>
 
 All three have p-values smaller than 0.05, therefore I used Tukey's Multiple Comparison Correction to identify which clusters differ.
 
 #### Heart Rate, Gestational Age, and Birth Weight
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/TUKEY_Comparison.png" alt="" class="center">
+</p>
 
 #### Heart Rate
 For the third trimester heart rate, the differing clusters are:
