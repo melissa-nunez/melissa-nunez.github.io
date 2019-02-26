@@ -1,5 +1,5 @@
 ---
-title: "Deep Phenotyping of Maternal Trajectories Using K-means Clustering Among Pregnant Women in Cape Town, South Africa"
+title: "Deep Phenotyping of Maternal Among Pregnant Women in Cape Town, South Africa Trajectories Using K-means Clustering"
 date: 2018-04-23
 tags: [unsupervised learning, k-means, clustering, R]
 excerpt: "Unsupervised learning for Deep Phenotyping"
