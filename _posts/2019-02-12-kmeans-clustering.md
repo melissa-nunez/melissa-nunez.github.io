@@ -107,8 +107,6 @@ For the third trimester heart rate, the differing clusters are:
 * unexposed and cluster 2
 * unexposed and cluster 3
 
-From the data, the unexposed cluster has a significantly higher heart rate mean than cluster 2, at an alpha level of 0.05, with a p-value of 0.04916.
-
 #### Gestational age
 
 For the gestational age outcome, the differing clusters are:
