@@ -9,15 +9,15 @@ permalink: /certificates/
 ## SQL
 * [Intro to SQL for Data Science](https://www.datacamp.com/statement-of-accomplishment/course/af6b693e3e192d41d6e5e7a76e207f875247a878)
 
-## Analysis
+## Analysis & Visualization
 * [Sentiment Analysis in R: The Tidy Way](https://www.datacamp.com/statement-of-accomplishment/course/545e9dfb4664dd62b3d18aaf591faa75ea31da28)
+* [Data Visualization with ggplot2 (part 1)](https://www.datacamp.com/statement-of-accomplishment/course/80f930335a4114f050906fc372a80d126cfe73b3)
+* [Data Visualization with ggplot2 (part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
 
 ## R programming
 * [Introduction to R](https://www.datacamp.com/statement-of-accomplishment/course/a5b15a4427fcd051af1ddbf36dc342c820b000b6)
 * [Intermediate R](https://www.datacamp.com/statement-of-accomplishment/course/f314475a3b2fd88f042c7bc43e69811328672534)
 * [Introduction to Tidyverse](https://www.datacamp.com/statement-of-accomplishment/course/c4f5f8ce02a88c07368e4fc0840814725f92fb4d)
-* [Data Visualization with ggplot2 (part 1)](https://www.datacamp.com/statement-of-accomplishment/course/80f930335a4114f050906fc372a80d126cfe73b3)
-* [Data Visualization with ggplot2 (part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
 * [Importing Data in R (part 1)](https://www.datacamp.com/statement-of-accomplishment/course/a5838d57990964ab0d864c7f944965765111e342)
 * [Importing Data in R (part 2)](https://www.datacamp.com/statement-of-accomplishment/course/26684e9132f5b86cca4d78e335d9d6f3632bee0f)
 * [Data Manipulation in R with dplyr](https://www.datacamp.com/statement-of-accomplishment/course/5389364c183631af72c67f0b9f7e93cbc2f9e653)
