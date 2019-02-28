@@ -8,9 +8,9 @@ header:
 ---
 
 ### Introduction
-Experts agree that Alzheimer's Disease is caused by abnormal buildup of beta-amyloid protein within the brain. The amyloid protein destroys brain cells and as Alzheimer's progresses, both the cortical and hippocampus shrink and ventricles are enlarged. Understanding the progression of the brain deterioration and the correlations of deterioration between parts of the brain is a crucial part of understanding where there is room for any possible remedy for patients. Brain atrophy, measured by MRI, and hypometabolism, measured by PET, are primary diagnostic biomarkers for Alzheimer's disease. Currently, the field is moving towards multi-modal brain imaging. Rather than using data from only one medical measure, such as MRI, Multi-modal analysis incorporates data from different medical tools including MRI, FMRI, PET, WMHI, and others.
+Experts agree that Alzheimer's Disease is caused by abnormal buildup of beta-amyloid protein within the brain. The amyloid protein destroys brain cells and as Alzheimer's progresses, both the cortical and hippocampus shrink and ventricles are enlarged. Understanding the progression of the brain deterioration and the correlations of deterioration between parts of the brain is a crucial part of identifying where there is room for possible remedy for patients. Brain atrophy, measured by MRI, and hypometabolism, measured by PET, are primary diagnostic biomarkers for Alzheimer's disease. Currently, the field is moving towards multi-modal brain imaging. Rather than using data from only one medical measure, such as MRI, Multi-modal analysis incorporates data from different medical tools including MRI, FMRI, PET, WMHI, and others.
 
-The goal of this projects is to use data from the Alzheimer's Disease Neuroimaging Initiative (ADNI) and the Reference Ability Neural Network (RANN) study to explore correlations between the subcortical volume and cortical thickness structures of the brain for both sets of participants. Both of these measures are T1 images that come from MRI. Ultimately, I hope to expand the analysis to incorporate other measures, ideally WMHI data.
+The goal of this project is to use data from the Alzheimer's Disease Neuroimaging Initiative (ADNI) and the Reference Ability Neural Network (RANN) study to explore correlations between the subcortical volume and cortical thickness structures of the brain for both sets of participants. Both of these measures are T1 images that come from MRI. Ultimately, I hope to expand the analysis to incorporate other measures, ideally WMHI data.
 
 Partial least squares regression was used to identify significant cortical thickness predictors of subcortical volume.
 
@@ -18,7 +18,7 @@ Partial least squares regression was used to identify significant cortical thick
 The Alzheimer's Disease Neuroimaging Initiative (ADNI) is a multisite study that aims to improve clinical trials for the prevention and treatment of Alzheimer’s disease. Many techniques were used to study the participants such as MRI scanning, PET scanning, and neuropsychological tests. The Reference Ability Neural Network (RANN) Study collected similar data on cognitively normal young and old patients. ADNI participants consist of people diagnosed with Alzheimer's disease while RANN participants are healthy patients.
 
 ### Methods
-Partial least squares regression (plsr) optimizes the latent components describing the global correlation of the images treated as multi-dimensional arrays. Essentially, this enables the model to identify significant correlations between voxels in images of different modalities. The model is allows for the user to choose the number of latent components that should be used. Part of my analysis includes calculating the optimal amount of latent components to be used for the model based on mean squared error of the predictions (MSEP).
+Partial least squares regression (plsr) optimizes the latent components describing the global correlation of the images treated as multi-dimensional arrays. Essentially, this enables the model to identify significant correlations between voxels in images of different modalities. The model allows for the user to choose the number of latent components that should be used. Part of my analysis includes calculating the optimal number of latent components to be used for the model based on mean squared error of the predictions (MSEP).
 
 My approach is as follows:
 
@@ -41,7 +41,7 @@ Because these are patients with Alzheimer's disease, then it is understood that 
 Included are some summary statistics for the RANN data:
 
 <p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/images/plsr_table1.png" alt="" align="middle">
+<img src="{{ site.url }}{{ site.baseurl }}/images/plsr_table2.png" alt="" align="middle">
 </p>
 
 ### Code
@@ -51,7 +51,7 @@ I created a function that takes in the following parameters:
 * The set of predictor variables (x)
 * A list of the indices for each bootstrapped set (nums)
 
-The function then calculates the optimal latent components and returns the regression coefficients for each dataset.
+The function then calculates the optimal latent components and returns a list of the regression coefficients for each dataset.
 
 ```r
 plsr_opt_coef <- function(x,y,nums)
@@ -106,4 +106,11 @@ opt_coef_model <- plsr_opt_coef(CT_Set, SV_Set, resamples)
 </p>
 
 ### Summary
-The ADNI subjects demonstrated more correlations than the RANN subjects. It has been  shown that the entorhinal cortex and hippocampus deteriorate among Alzheimer's patients, and therefore I was specifically looking for this correlation to be shown. There is an association between the entorhinal cortex and hippocampus among the ADNI patients, however this association is not present among the RANN patients. This is expected.
+The ADNI subjects have correlations than the RANN subjects. It has been shown that among Alzheimer's patients, the entorhinal cortex and hippocampus deteriorate. I was specifically looking for this correlation. There is an association between the entorhinal cortex and hippocampus among the ADNI patients, however this association is not present among the RANN patients, as was expected.
+
+### Further Research
+Future research ideas to follow:
+
+* Using sparse partial least squares regression on the data to compare the results – SPLSR takes into account sparse data/correlations.
+* Asses the reproducibility/stability of correlations between datasets
+* Identify not only single correlations but networks
