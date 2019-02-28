@@ -1,8 +1,8 @@
 ---
-title: "Exploring Associations Between Cortical Thickness and Subcortical volume Measures Using Partial Least Squares Regression"
+title: "Exploring Associations Between Cortical Thickness and Subcortical Volume Measures Using Partial Least Squares Regression"
 date: 2018-10-14
 tags: [neuroimaging, cross-validation, plsr, R, regression]
-excerpt: "Applying partial least squares regression and sparse partial least squares regression to the Alzheimer's Disease Neuroimaging Initiative data to identify networks of correlations between cortical thickness measures and subcortical volume measures"
+excerpt: "Applying partial least squares regression to the Alzheimer's Disease Neuroimaging Initiative data to identify networks of correlations between cortical thickness and subcortical volume measures"
 header:
   image: "/images/plsr_banner.jpg"
 ---
