@@ -106,7 +106,7 @@ opt_coef_model <- plsr_opt_coef(CT_Set, SV_Set, resamples)
 </p>
 
 ### Summary
-The ADNI subjects have correlations than the RANN subjects. It has been shown that among Alzheimer's patients, the entorhinal cortex and hippocampus deteriorate. I was specifically looking for this correlation. There is an association between the entorhinal cortex and hippocampus among the ADNI patients, however this association is not present among the RANN patients, as was expected.
+The ADNI subjects presented more correlations than the RANN subjects. It has been shown that among Alzheimer's patients, both the entorhinal cortex and hippocampus simultaneously deteriorate. I was specifically looking for this correlation. There is an association between the entorhinal cortex and hippocampus among the ADNI patients, however this association is not present among the RANN patients, as was expected.
 
 ### Further Research
 Future research ideas to follow:
