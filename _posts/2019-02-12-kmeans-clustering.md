@@ -12,11 +12,7 @@ Identifying the drinking/smoking patterns of women during pregnancy is important
 
 For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds).
 
-Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site. The sample size table is included.
-
-<p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
-</p>
+Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site.
 
 Some participants did not have data for all three trimesters available. For this analysis, only those who did have all trimester data available were included.
 
@@ -28,7 +24,13 @@ Since the women demonstrate dynamic drinking and smoking habits, the first step 
 * Total Standard Drinks Per Trimester
 * A "mood" variable made up of the women's fedinburgh, state anxiety, and trait anxiety scores
 
-It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 13, and for state and trait anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects missing at least one mood variable (either state_anx, trait_anx, or fedinburgh). Those subjects were removed from clustering. I included sample code for both the clusters and the visualization of variables per cluster.
+It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 13, and for state and trait anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects missing at least one mood variable (either state_anx, trait_anx, or fedinburgh). Those subjects were removed from clustering. The sample size table is included:
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
+</p>
+
+I included sample code for both the clusters and the visualization of variables per cluster.
 
 ```r
 cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure ==
