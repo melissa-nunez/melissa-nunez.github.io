@@ -10,7 +10,7 @@ header:
 
 Identifying the drinking/smoking patterns of women during pregnancy is important in order to better understand the risk of possible postnatal outcomes.
 
-For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds).
+For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds). I conducted exploratory analysis to identify trends and associations.
 
 Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site.
 
@@ -18,13 +18,16 @@ Some participants did not have data for all three trimesters available. For this
 
 ## Clustering
 
-Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. There is also depression and anxiety data available for the women.  At the beginning of the study, each participant was given the Edinburgh postnatal depression scale questionnaire and a depression score was calculated. After some discussion, it was decided that a depression variable could be used for clustering as well. The data is longitudinal, therefore I used the 'kml3d' package in R to create trajectories. The variables used to cluster are
+Since the women demonstrate dynamic drinking and smoking habits, the first step was to define the exposure variable by clustering the women based on their drinking and smoking patterns. I accomplished this through the use of k-means clustering. There is also depression and anxiety data available for the women. At the beginning of the study, each participant was given the fedinburgh depression scale questionnaire and a depression score was calculated. They were also given the State-Trait Anxiety Inventory (STAI), a psychological inventory based on a 4-point scale that consists of 40 questions on a self-report basis. The STAI measures two types of anxiety – state anxiety, or anxiety about an event, and trait anxiety, or anxiety level as a personal characteristic. There is the possibility of an association between smoking, drinking, depression, and anxiety. It was decided to use the five variables to cluster the women. The variables used to cluster are
 
 * Total Cigarettes Smoked Per Trimester
 * Total Standard Drinks Per Trimester
 * A "mood" variable made up of the women's fedinburgh, state anxiety, and trait anxiety scores
 
-It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 13, and for state and trait anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects missing at least one mood variable (either state_anx, trait_anx, or fedinburgh). Those subjects were removed from clustering. The sample size table is included:
+The data is longitudinal, and therefore I used the 'kml3d' package in R to create trajectories. The kml3d package is "an implementation of k-means specifically designed to cluster joint trajectories (longitudinal data on
+several variable-trajectories)". The package description can be found [here](https://cran.r-project.org/web/packages/kml3d/kml3d.pdf).
+
+It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 13, and for the state and trait anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects missing at least one mood variable (either state_anx, trait_anx, or fedinburgh). Those subjects were removed from clustering. The sample size table is included:
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
@@ -154,3 +157,5 @@ For the birth weight outcome, the differing clusters are:
 
 ### Summary
 The goal is to identify wether there are different mean outcomes between the clusters and, specifically, the unexposed group. The unexposed group has a significantly higher heart rate mean than cluster 2, at an alpha level of 0.05, with a p-value of 0.04916. For gestational age, the unexposed group has a significantly higher gestational age in weeks than cluster 3, at an alpha level of 0.05, with a p-value of 0.00077. For birth weight, the unexposed group has a significantly higher birth weight than all four clusters, at an alpha level of 0.05. Although the analysis is exploratory, it seems that smoking and drinking may lead to changes in gestational age, birth weight, and heart rate.
+
+Moving forward, I would like to explore a different number of clusters, specifically 5 and 6. The clusters may sparse out more and have a better clinical interpretation. The results also hint at signs of possible accelerated development. Accelerated development occurs when the baby begins to develop sooner than what is considered normal. The baby may show signs of a slower heart rate, increase in heart variability, and fast weight gain. This may lead to preterm birth.
