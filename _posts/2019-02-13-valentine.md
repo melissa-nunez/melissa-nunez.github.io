@@ -164,7 +164,7 @@ The most frequently used words along with its sentiment for this song:
 
 ### Happy Songs
 
-**The top slow but happy songs are:**
+**The top slow but romantic songs are:**
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/slowhappy.png" alt="" class="center">
@@ -180,7 +180,7 @@ The most frequently used words along with its sentiment for this song:
 <img src="{{ site.url }}{{ site.baseurl }}/images/jamesblunt.png" alt="" class="center">
 </p>
 
-**The top upbeat and happy songs are:**
+**The top upbeat and romantic songs are:**
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/upbeathappy.png" alt="" class="center">
@@ -197,10 +197,9 @@ The most frequently used words along with its sentiment for this song:
 </p>
 
 ## Conclusion
+I was able to identify four different subtypes of love songs. The four subtypes are slow and sad, slow and romantic, upbeat yet sad, and upbeat and romantic. Overall, if you prefer slower songs like I do, then the most heart-breaking song for you would be Bleeding Love while the more romantic one would be You're Beautiful. Meanwhile, if you prefer upbeat songs, the saddest love song would be Landslide and the more romantic song is Wouldn't it be nice.
 
-Overall, if you prefer slower songs like I do, then the most heart-breaking song for you would be Bleeding Love while the more romantic one would be You're Beautiful. I definitely enjoyed having bleeding love on repeat for Valentine's Day.
-
-Spotify's API is a great resource and there are many ways in which it can be used. I will link a few other projects (from which I was inspired) that have used the API. It is also a great way to familiarize yourself with sentiment analysis.
+Spotify's API is a great resource and there are many ways in which it can be used. I have linked a few other projects (from which I was inspired) that have used the API. It is also a great way to familiarize yourself with sentiment analysis.
 
 If interested, make sure to check these out:
 
