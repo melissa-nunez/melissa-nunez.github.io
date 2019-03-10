@@ -10,11 +10,11 @@ header:
 
 Identifying the drinking/smoking patterns of women during pregnancy is important in order to better understand the risk of possible postnatal outcomes.
 
-For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate the role of prenatal drinking and smoking on postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds). I conducted exploratory analysis to identify trends and associations.
+For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate how prenatal drinking, prenatal smoking, and emotional state during pregnancy may effect postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds). I conducted exploratory analysis to identify trends and associations.
 
 Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site.
 
-Some participants did not have data for all three trimesters available. For this analysis, only those who did have all trimester data available were included.
+Some participants did not have available data for all three trimesters. For this analysis, only those who did have all trimester data available were included.
 
 ## Clustering
 
@@ -25,22 +25,24 @@ Since the women demonstrate dynamic drinking and smoking habits, the first step 
 * A "mood" variable made up of the women's fedinburgh, state anxiety, and trait anxiety scores
 
 The data is longitudinal, and therefore I used the 'kml3d' package in R to create trajectories. The kml3d package is "an implementation of k-means specifically designed to cluster joint trajectories (longitudinal data on
-several variable-trajectories)". The package description can be found [here](https://cran.r-project.org/web/packages/kml3d/kml3d.pdf).
+several variable-trajectories)". Further details about the package can be found [here](https://cran.r-project.org/web/packages/kml3d/kml3d.pdf).
 
-It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. The cut off for the fedinburgh depression variable is 13, and for the state and trait anxiety variables is 40. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects missing at least one mood variable (either state_anx, trait_anx, or fedinburgh). Those subjects were removed from clustering. The sample size table is included:
+It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. 13 is the cut off score for the fedinburgh depression variable, and for 40 the state and trait anxiety variables. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects who are missing at least one mood variable (either state anxiety, trait anxiety, or fedinburgh). Those subjects were removed from clustering. I included sample code for both the clusters and the visualization of variables per cluster.
 
-<p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
-</p>
-
-I included sample code for both the clusters and the visualization of variables per cluster.
 
 ```r
+# Clustering
 cld.joint.fedinburgh <- cld3d(pass.US.completers.fedinburgh[pass.US.completers.fedinburgh$Exposure ==
 1,], timeInData = list(grep('TotCigsT',names(merge)),grep('TotalStdDrinksT',names(merge)),rep(181,
 3)), time = c(1,2,3))
 kml3d(cld.joint.fedinburgh,nbClusters = 4:9)
 ```
+
+The sample size table is as follows:
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
+</p>
 
 ### Visualizing The Clusters
 
