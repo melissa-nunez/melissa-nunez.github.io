@@ -5,7 +5,7 @@ permalink: /about/
 header:
 ---
 
-#### I am an M.S Candidate in Biostatistics at Columbia University's Mailman School of Public Health with an interest in data science. I am experienced in hypothesis testing, ANOVA, regression models, data visualization, exploratory data analysis, and sentiment analysis to name a few. I enjoy mathematics and self-directed learning (#TeamMOOCS). Feel free to connect with me on LinkedIn or through email and visit my GitHub page for examples of my code.
+#### I am an M.S Candidate in Biostatistics at Columbia University's Mailman School of Public Health with an interest in data science. I am experienced in hypothesis testing, t-tests, chi-square tests, ANOVA, regression models (linear, logistic, mixed effects), data visualization, clustering, classification, and sentiment analysis to name a few. I enjoy applied mathematics and self-directed learning (#TeamMOOCS). Feel free to connect with me on LinkedIn or through email and visit my GitHub page for examples of my code.
 
 ---
 
