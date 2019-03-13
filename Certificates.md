@@ -13,7 +13,8 @@ permalink: /certificates/
 * [Sentiment Analysis in R: The Tidy Way](https://www.datacamp.com/statement-of-accomplishment/course/545e9dfb4664dd62b3d18aaf591faa75ea31da28)
 * [Data Visualization with ggplot2 (part 1)](https://www.datacamp.com/statement-of-accomplishment/course/80f930335a4114f050906fc372a80d126cfe73b3)
 * [Data Visualization with ggplot2 (part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
-* [Cluster Analysis in R](https://www.datacamp.com/statement-of-accomplishment/course/d2686f3755836d4ad7cbe3b095a46e8adc8c393c) 
+* [Correlation and Regression](https://www.datacamp.com/statement-of-accomplishment/course/20ec6a869f8c7f35fb5c5078f172c683fee42def)
+* [Cluster Analysis in R](https://www.datacamp.com/statement-of-accomplishment/course/d2686f3755836d4ad7cbe3b095a46e8adc8c393c)
 
 ## R programming
 * [Introduction to R](https://www.datacamp.com/statement-of-accomplishment/course/a5b15a4427fcd051af1ddbf36dc342c820b000b6)
