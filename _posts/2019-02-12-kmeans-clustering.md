@@ -10,9 +10,7 @@ header:
 
 Identifying the drinking/smoking patterns of women during pregnancy is important in order to better understand the risk of possible postnatal outcomes.
 
-For this project, I analyzed data from the Safe Passage Study, also known as the PASS study. This is a multi-center, prospective pregnancy cohort study that collected data from women living in the Northern Plains, US and Cape Town, South Africa. Both populations are at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate how prenatal drinking, prenatal smoking, and emotional state during pregnancy may effect postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds). I conducted exploratory analysis to identify trends and associations.
-
-Because results may differ by site, the analysis was stratified. I will focus on the Cape Town, SA site.
+For this project, I analyzed data from a multi-center, prospective pregnancy cohort study that collected data from women living in Cape Town, South Africa. This population is at high risk for drinking and smoking during pregnancy. The goal of the study was to investigate how prenatal drinking, prenatal smoking, and emotional state during pregnancy may effect postnatal outcomes - specifically child heart rate during third trimester, gestational age in weeks, and baby weight at birth (in pounds). I conducted exploratory analysis to identify trends and associations.
 
 Some participants did not have available data for all three trimesters. For this analysis, only those who did have all trimester data available were included.
 
