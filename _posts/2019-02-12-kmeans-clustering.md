@@ -25,8 +25,7 @@ Since the women demonstrate dynamic drinking and smoking habits, the first step 
 The data is longitudinal, and therefore I used the 'kml3d' package in R to create trajectories. The kml3d package is "an implementation of k-means specifically designed to cluster joint trajectories (longitudinal data on
 several variable-trajectories)". Further details about the package can be found [here](https://cran.r-project.org/web/packages/kml3d/kml3d.pdf).
 
-It was pre-determined that the number of clusters should be 4. Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. 13 is the cut off score for the fedinburgh depression variable, and for 40 the state and trait anxiety variables. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects who are missing at least one mood variable (either state anxiety, trait anxiety, or fedinburgh). Those subjects were removed from clustering. I included sample code for both the clusters and the visualization of variables per cluster.
-
+Prior to clustering, we wanted to establish a "non-exposed" group. Therefore, those who did not drink or smoke throughout their pregnancy were considered non-exposed and were not included in the clustering. 13 is the cut off score for the fedinburgh depression variable, and for 40 the state and trait anxiety variables. Those below the cut off are non-exposed (i.e not depressed). There are 154 subjects who are missing at least one mood variable (either state anxiety, trait anxiety, or fedinburgh). Those subjects were removed from clustering. I included sample code for both the clusters and the visualization of variables per cluster.
 
 ```r
 # Clustering
@@ -40,6 +39,14 @@ The sample size table is as follows:
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/Table1_SA.png" alt="" class="center">
+</p>
+
+### Number of clusters
+
+The Calinski & Harabasz criteria was used to choose the number of clusters. The following plots show the longitudinal trajectories for each set of variables for a given cluster size. From this criteria, 4 clusters were used as the best number of clusters.
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_Criteria.png" alt="" class="center">
 </p>
 
 ### Visualizing The Clusters
