@@ -3,8 +3,10 @@ layout: single
 title:
 permalink: /about/
 header:
-  image: "IMG_1721.jpg"
 ---
+
+
+<img src="/images/IMG_1721.jpg" alt="hi" class="inline"/>
 
 #### I am an M.S Candidate in Biostatistics at Columbia University's Mailman School of Public Health with an interest in data science. I am experienced in hypothesis testing, t-tests, chi-square tests, ANOVA, regression models (linear, logistic, mixed effects), data visualization, clustering, classification, and sentiment analysis to name a few. I enjoy applied mathematics and self-directed learning (#TeamMOOCS). Feel free to connect with me on LinkedIn or through email and visit my GitHub page for examples of my code.
 
