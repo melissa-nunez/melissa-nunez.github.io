@@ -15,6 +15,7 @@ permalink: /certificates/
 * [Data Visualization with ggplot2 (part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2)
 * [Correlation and Regression](https://www.datacamp.com/statement-of-accomplishment/course/20ec6a869f8c7f35fb5c5078f172c683fee42def)
 * [Cluster Analysis in R](https://www.datacamp.com/statement-of-accomplishment/course/d2686f3755836d4ad7cbe3b095a46e8adc8c393c)
+* [Interactive Data Visualization with plotly in R](https://www.datacamp.com/statement-of-accomplishment/course/b0a583929869254f63d1931335c18563cced3a15)
 
 ## R programming
 * [Introduction to R](https://www.datacamp.com/statement-of-accomplishment/course/a5b15a4427fcd051af1ddbf36dc342c820b000b6)
