@@ -7,7 +7,7 @@ header:
   image: "/images/hearts.jpg"
 ---
 
-The connotation for Valentine's Day can differ depending on who you ask. Although it is meant to be a joyous day for lovers to express their affection, it can also be a sad holiday for those you have no one to share it with. So this year, as someone who fell into the later category, I decided to celebrate the holiday by analyzing Spotify's Valentine's Day playlist with the goal of identifying which song is the saddest (i.e heart-break) love song and which song is the happiest (i.e. most romantic) love song. I achieved this by clustering the playlist into songs with low valence and low energy vs those with high valence and high energy and then filtering based on the percentage of sad words found in the lyrics.
+The connotation for Valentine's Day can differ depending on who you ask. Although it is meant to be a joyous day for lovers to express their affection, it can also be a sad holiday for those you have no one to share it with. So this year, I decided to analyze Spotify's Valentine's Day playlist with the goal of identifying which song is the saddest (i.e heart-break) love song and which song is the happiest (i.e. most romantic) love song. I achieved this by clustering the playlist into songs with low valence and low energy vs those with high valence and high energy and then filtering based on the percentage of sad words found in the lyrics.
 
 ### Installing
 
