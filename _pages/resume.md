@@ -1,7 +1,7 @@
 ---
 layout: single
 title:
-permalink: / resume /
+permalink: /resume/
 header:
 ---
 
