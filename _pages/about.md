@@ -3,6 +3,9 @@ layout: single
 title:
 permalink: /about/
 header:
+values:
+      layout: single
+      author_profile: true
 ---
 
 
