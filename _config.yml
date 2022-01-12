@@ -158,7 +158,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - README
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -181,6 +180,7 @@ exclude:
   - node_modules
   - package.json
   - Rakefile
+  - README
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
