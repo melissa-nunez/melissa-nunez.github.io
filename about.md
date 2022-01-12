@@ -3,7 +3,6 @@ layout: single
 title:
 permalink: /about/
 header:
-  image: "/images/banner.png"
 ---
 
 
